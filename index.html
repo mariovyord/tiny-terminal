@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tiny-terminal.css</title>
+    <link rel="stylesheet" href="tiny-terminal.css">
+    <link rel="icon" href="favicon-32x32.png">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <h1>Welcome to the Terminal UI</h1>
+            <p>Styled with <strong>TINY TERMINAL CSS</strong>, inspired by retro terminals and movie hackers.</p>
+            <hr/>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+            <p>Paragraph text, styled for the terminal experience. Perfect for your "movie hacker" aesthetic.</p>
+            <a href="#">Link, styled for terminal experience</a>
+        </section>
+
+        <section>
+            <h2>Buttons</h2>
+            <button>Button</button>
+            <a class="button" href="#">Link, styled as button</a>
+        </section>
+
+        <section>
+            <h2>Form Elements</h2>
+            <label for="name">Terminal Username</label>
+            <input type="text" id="name" placeholder="Enter your username">
+
+            <label for="role">Assigned Role</label>
+            <select id="role">
+                <option>Admin</option>
+                <option>Editor</option>
+                <option>Viewer</option>
+            </select>
+
+            <label for="bio">Heroic Biography</label>
+            <textarea id="bio" rows="4" placeholder="Describe your most productive day in the terminal"></textarea>
+            
+            <h3>Radio Buttons</h3>
+            <div class="form-check">
+                <input type="radio" id="factory" name="workplace" checked>
+                <label for="factory">Localhost</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="collective" name="workplace">
+                <label for="collective">Remote Server</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" id="party" name="workplace">
+                <label for="party">Cloud Instance</label>
+            </div>
+            
+            <h3>Checkboxes</h3>
+            <div class="form-check">
+                <input type="checkbox" id="quota" checked>
+                <label for="quota">Exceeded Bandwidth Quota</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="training">
+                <label for="training">Completed Security Training</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="committee">
+                <label for="committee">Member of Admin Committee</label>
+            </div>
+        </section>
+        
+        <!-- Fieldset Example -->
+        <section>
+            <h2>Fieldset & Legend</h2>
+            <fieldset>
+                <legend>Terminal Configuration</legend>
+                <label for="worker-name">Username</label>
+                <input type="text" id="worker-name" placeholder="Enter your username">
+                <label for="worker-position">Command</label>
+                <input type="text" id="worker-position" placeholder="e.g. ping localhost">
+            </fieldset>
+        </section>
+
+        <section>
+            <h2>Dialog</h2>
+            <dialog id="demoDialog">
+                <p>Official System Message: All operations normal. Continue to monitor performance.</p>
+                <button onclick="document.getElementById('demoDialog').close()">Close</button>
+            </dialog>
+            <button onclick="document.getElementById('demoDialog').showModal()">Open System Dialog</button>
+        </section>
+
+        <!-- Table Example -->
+        <section>
+            <h2>Tables</h2>
+            <p>Terminal-styled data organization for quick reference.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Process Name</th>
+                        <th>CPU Usage</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>System</td>
+                        <td>0.1%</td>
+                        <td>Running</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>bash</td>
+                        <td>0.5%</td>
+                        <td>Sleeping</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>sshd</td>
+                        <td>0.3%</td>
+                        <td>Waiting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Blockquote Example -->
+        <section>
+            <h2>Blockquotes</h2>
+            <blockquote>
+                The terminal is a gateway to the soul of the machine. Treat it with respect, and it shall serve you well.
+            </blockquote>
+        </section>
+
+        <!-- Code Example -->
+        <section>
+            <h2>Code & Pre Elements</h2>
+            <p>Inline <code>code</code> elements for terminal commands.</p>
+            <pre><code>// Terminal-style programming
+function executeCommand() {
+  return "Command executed successfully!";
+}</code></pre>
+        </section>
+
+        <!-- Lists Example -->
+        <section>
+            <h2>Lists</h2>
+            
+            <h3>Unordered List</h3>
+            <ul>
+                <li>Boot up sequence</li>
+                <li>Run diagnostics</li>
+                <li>Check network connections</li>
+                <li>Launch applications</li>
+            </ul>
+            
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Connect to server</li>
+                <li>Authenticate user</li>
+                <li>Execute command</li>
+                <li>Log out</li>
+            </ol>
+        </section>
+
+        <!-- Horizontal Rule Example -->
+        <section>
+            <h2>Horizontal Rule</h2>
+            <p>Official System Divider (for separating processes):</p>
+            <hr>
+        </section>
+
+        <!-- Progress Bar Example -->
+        <section>
+            <h2>Progress Bar</h2>
+            <p>System Update Progress:</p>
+            <progress value="70" max="100"></progress>
+            <br/>
+            <br/>
+            <p>Disk Space Usage:</p>
+            <progress value="40" max="100"></progress>
+        </section>
+
+        <!-- Details & Summary Example -->
+        <section>
+            <h2>Details & Summary</h2>
+            <details>
+                <summary>System Specifications</summary>
+                <p>CPU: 2.4 GHz Quad-Core, RAM: 16 GB, OS: RetroLinux 2025</p>
+            </details>
+            <details>
+                <summary>Network Configuration</summary>
+                <p>IP Address: 192.168.1.10, Subnet Mask: 255.255.255.0, Gateway: 192.168.1.1</p>
+            </details>
+        </section>
+    </main>
+    <footer class="container">
+        <div class="soviet-border"></div>
+        <div style="padding: 1.5rem 0; text-align: center;">
+            <p><span class="icon-terminal-after">Tiny Terminal CSS</span></p>
+            <p>A retro, terminal-inspired CSS library</p>
+            <p>Created by Mario Yordanov</p>
+            <p><a href="https://github.com/mariovyord/tiny-terminal-css" target="_blank">GitHub Repository</a></p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">2025 - Open Source and Free for All</p>
+        </div>
+    </footer>
+</body>
+</html>
