@@ -2,7 +2,7 @@
 
 **Tiny Terminal CSS** is a lightweight, retro-inspired CSS framework designed to bring the aesthetic of classic terminals and "movie hacker" vibes to your web projects. Perfect for developers who love the nostalgic glow of green text on a dark background.
 
-Inspired by the simplicity of semantic HTML and the timeless charm of terminal UIs.
+Inspired by the simplicity of semantic HTML and the timeless charm of terminal UIs, as well as the bold design of [Tiny Brutalism CSS](https://github.com/pruger/tiny-brutalism-css).
 
 **No frameworks. No dependencies. Just pure CSS.**
 
