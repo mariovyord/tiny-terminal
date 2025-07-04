@@ -4,6 +4,8 @@
 
 It focuses on styling semantic HTML elements directly, avoiding the use of custom classes to ensure simplicity and maintain semantic integrity.
 
+Inspired by [Just fucking use HTML](https://justfuckingusehtml.com/) and [Tiny Brutalism CSS](https://github.com/pruger/tiny-brutalism-css).
+
 **No frameworks. No dependencies. Just pure CSS.**
 
 Size: ~8KB (Small enough to fit on a floppy disk!)
