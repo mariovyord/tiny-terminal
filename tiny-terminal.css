@@ -1,0 +1,328 @@
+/* tiny-terminal.css - Ultra-Radical cool-retro-term Inspired Terminal UI */
+
+:root {
+    --primary-color: #33ff33; /* authentic phosphor green */
+    --secondary-color: #119911;
+    --background-color: #0d0d0d; /* slightly lighter black */
+    --text-color: #33ff33;
+    --danger-container: #330000;
+    --warning-container: #333300;
+    --info-container: #003333;
+    --success-container: #003300;
+    --grid-gap: 0rem;
+    --grid-padding: 1rem;
+}
+
+html, body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: monospace;
+    image-rendering: pixelated;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    overflow: auto;
+    text-shadow:
+        0 0 2px var(--primary-color),
+        0 0 5px var(--primary-color),
+        0 0 20px var(--primary-color);
+    position: relative;
+    letter-spacing: 0.05em;
+}
+
+/* Vignette for Screen Curve */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 999;
+}
+
+/* Scanlines */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(51, 255, 51, 0.08) 0,
+        rgba(51, 255, 51, 0.08) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    z-index: 998;
+}
+
+/* Radical Animation */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+    70% { opacity: 1; }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: flicker 1.5s infinite alternate;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Buttons */
+button, .button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    text-shadow: 0 0 2px var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+button:hover, .button:hover {
+    background: var(--secondary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Forms */
+input:not([type="radio"]):not([type="checkbox"]), textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    background: var(--background-color);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 2px var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 1px solid var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Placeholder */
+::placeholder {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Radio & Checkbox */
+input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid var(--primary-color);
+    margin-right: 0.5rem;
+    background: var(--background-color);
+    transition: all 0.2s ease;
+}
+
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+    background: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.form-check label {
+    margin-bottom: 0;
+}
+
+/* Dialog */
+dialog {
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    background: var(--background-color);
+    color: var(--text-color);
+    text-shadow: 0 0 2px var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Alerts */
+.alert {
+    padding: 0.75rem;
+    border: 1px solid var(--primary-color);
+    background: var(--background-color);
+    color: var(--text-color);
+    text-shadow: 0 0 2px var(--primary-color);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    text-shadow: 0 0 2px var(--primary-color);
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+    border: 1px solid var(--primary-color);
+}
+
+/* Blockquotes */
+blockquote {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-left: 3px solid var(--primary-color);
+    background: var(--background-color);
+    font-style: italic;
+    text-shadow: 0 0 2px var(--primary-color);
+}
+
+/* Code & Pre */
+code {
+    font-family: monospace;
+    background: var(--background-color);
+    padding: 0.2rem 0.4rem;
+    border: 1px solid var(--primary-color);
+    text-shadow: 0 0 2px var(--primary-color);
+}
+
+pre {
+    background: var(--background-color);
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    overflow: auto;
+    text-shadow: 0 0 2px var(--primary-color);
+}
+
+/* Lists */
+ul, ol {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+ol li {
+    margin-bottom: 0.5rem;
+    list-style-type: decimal;
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 1px solid var(--primary-color);
+    margin: 1.5rem 0;
+}
+
+/* Fieldset & Legend */
+fieldset {
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Progress Bar */
+progress {
+    width: 100%;
+    height: 1rem;
+    border: 1px solid var(--primary-color);
+}
+
+progress::-webkit-progress-bar {
+    background: var(--background-color);
+}
+
+progress::-webkit-progress-value {
+    background: var(--primary-color);
+}
+
+progress::-moz-progress-bar {
+    background: var(--primary-color);
+}
+
+/* Details & Summary */
+details {
+    border: 1px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+summary {
+    padding: 0.5rem;
+    background: var(--background-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+details[open] summary {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* Grid System */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: var(--grid-padding);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 calc(-1 * var(--grid-gap) / 2);
+}
+
+.col {
+    flex: 1 0 0%;
+    padding: 0 var(--grid-gap);
+}
+
+.col-1 { flex: 0 0 8.333%; max-width: 8.333%; }
+.col-2 { flex: 0 0 16.667%; max-width: 16.667%; }
+.col-3 { flex: 0 0 25%; max-width: 25%; }
+.col-4 { flex: 0 0 33.333%; max-width: 33.333%; }
+.col-5 { flex: 0 0 41.667%; max-width: 41.667%; }
+.col-6 { flex: 0 0 50%; max-width: 50%; }
+.col-7 { flex: 0 0 58.333%; max-width: 58.333%; }
+.col-8 { flex: 0 0 66.667%; max-width: 66.667%; }
+.col-9 { flex: 0 0 75%; max-width: 75%; }
+.col-10 { flex: 0 0 83.333%; max-width: 83.333%; }
+.col-11 { flex: 0 0 91.667%; max-width: 91.667%; }
+.col-12 { flex: 0 0 100%; max-width: 100%; }
