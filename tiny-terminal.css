@@ -9,7 +9,7 @@
     --text-color: var(--primary-color);
     --grid-gap: 2.5rem;
     --grid-padding: 1rem;
-    --max-width: 1280px;
+    --max-width: 1200px;
 }
 
 * {
@@ -39,10 +39,6 @@
 html {
     scrollbar-color: var(--primary-color) var(--background-color); 
     scrollbar-width: thin; 
-}
-
-/* Terminal UI Styles */
-html, body {
     background: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
@@ -60,7 +56,7 @@ html, body {
 }
 
 /* Vignette for Screen Curve */
-body::before {
+html::before {
     content: "";
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -70,7 +66,7 @@ body::before {
 }
 
 /* Scanlines */
-body::after {
+html::after {
     content: "";
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -84,6 +80,14 @@ body::after {
     );
     z-index: 998;
 }
+
+body {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--grid-padding);
+}
+
 
 @keyframes flicker {
     0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% { opacity: 1; }
@@ -104,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     animation: flicker 1.5s infinite alternate;
 }
-
 
 h1 {
     font-size: 2.5rem; 
@@ -164,7 +167,7 @@ a:focus-visible {
 }
 
 /* Buttons */
-button, .button {
+button {
     display: inline-block;
     padding: 0.4rem 1rem;
     background: transparent;
@@ -176,13 +179,13 @@ button, .button {
     font-size: 0.875rem
 }
 
-button:hover, .button:hover {
+button:hover {
     background: var(--secondary-color);
     color: var(--background-color);
     box-shadow: 0 0 10px var(--primary-color);
 }
 
-button:focus-visible, .button:focus-visible {
+button:focus-visible {
     outline: 1px solid var(--primary-color);
     box-shadow: 0 0 8px var(--primary-color);
 }
@@ -405,10 +408,3 @@ details[open] summary {
     border-bottom: 1px solid var(--primary-color);
 }
 
-/* Grid System */
-.container {
-    width: 100%;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: var(--grid-padding);
-}
