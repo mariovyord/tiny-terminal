@@ -1,16 +1,21 @@
-/* tiny-terminal.css - Ultra-Radical cool-retro-term Inspired Terminal UI */
+/* tiny-terminal.css - Terminal UI for the masses */
 
 :root {
-    --primary-color: #33ff33; /* authentic phosphor green */
+    --primary-color: #33ff33; 
     --secondary-color: #119911;
-    --background-color: #0d0d0d; /* slightly lighter black */
-    --text-color: #33ff33;
-    --danger-container: #330000;
-    --warning-container: #333300;
-    --info-container: #003333;
-    --success-container: #003300;
+    --background-color: #0d0d0d; 
+    --text-color: var(--primary-color);
     --grid-gap: 0rem;
     --grid-padding: 1rem;
+    --max-width: 1280px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
 }
 
 html, body {
@@ -28,7 +33,6 @@ html, body {
         0 0 5px var(--primary-color),
         0 0 20px var(--primary-color);
     position: relative;
-    letter-spacing: 0.05em;
 }
 
 /* Vignette for Screen Curve */
@@ -57,11 +61,13 @@ body::after {
     z-index: 998;
 }
 
-/* Radical Animation */
 @keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.9; }
-    70% { opacity: 1; }
+    0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% { opacity: 1; }
+    5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% { opacity: 0.92; }
+}
+
+section {
+    margin-bottom: 2.5rem;
 }
 
 /* Typography */
@@ -71,6 +77,31 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-transform: uppercase;
     animation: flicker 1.5s infinite alternate;
+}
+
+
+h1 {
+    font-size: 2.5rem; 
+}
+
+h2 {
+    font-size: 2rem; 
+}
+
+h3 {
+    font-size: 1.75rem; 
+}
+
+h4 {
+    font-size: 1.5rem; 
+}
+
+h5 {
+    font-size: 1.25rem; 
+}
+
+h6 {
+    font-size: 1rem; 
 }
 
 p {
@@ -89,6 +120,11 @@ a:hover {
     text-shadow: 0 0 10px var(--primary-color);
 }
 
+a:focus-visible {
+    outline: 1px solid var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
+}
+
 /* Buttons */
 button, .button {
     display: inline-block;
@@ -105,6 +141,11 @@ button:hover, .button:hover {
     background: var(--secondary-color);
     color: var(--background-color);
     box-shadow: 0 0 10px var(--primary-color);
+}
+
+button:focus-visible, .button:focus-visible {
+    outline: 1px solid var(--primary-color);
+    box-shadow: 0 0 8px var(--primary-color);
 }
 
 /* Forms */
@@ -170,15 +211,11 @@ dialog {
     color: var(--text-color);
     text-shadow: 0 0 2px var(--primary-color);
     box-shadow: 0 0 15px var(--primary-color);
-}
-
-/* Alerts */
-.alert {
-    padding: 0.75rem;
-    border: 1px solid var(--primary-color);
-    background: var(--background-color);
-    color: var(--text-color);
-    text-shadow: 0 0 2px var(--primary-color);
+    max-width: 800px;
+    min-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Tables */
@@ -211,7 +248,6 @@ code {
     font-family: monospace;
     background: var(--background-color);
     padding: 0.2rem 0.4rem;
-    border: 1px solid var(--primary-color);
     text-shadow: 0 0 2px var(--primary-color);
 }
 
@@ -283,8 +319,11 @@ details {
     margin-bottom: 1rem;
 }
 
-summary {
+details > * {
     padding: 0.5rem;
+}
+
+summary {
     background: var(--background-color);
     color: var(--primary-color);
     cursor: pointer;
@@ -298,31 +337,7 @@ details[open] summary {
 /* Grid System */
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding: var(--grid-padding);
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 calc(-1 * var(--grid-gap) / 2);
-}
-
-.col {
-    flex: 1 0 0%;
-    padding: 0 var(--grid-gap);
-}
-
-.col-1 { flex: 0 0 8.333%; max-width: 8.333%; }
-.col-2 { flex: 0 0 16.667%; max-width: 16.667%; }
-.col-3 { flex: 0 0 25%; max-width: 25%; }
-.col-4 { flex: 0 0 33.333%; max-width: 33.333%; }
-.col-5 { flex: 0 0 41.667%; max-width: 41.667%; }
-.col-6 { flex: 0 0 50%; max-width: 50%; }
-.col-7 { flex: 0 0 58.333%; max-width: 58.333%; }
-.col-8 { flex: 0 0 66.667%; max-width: 66.667%; }
-.col-9 { flex: 0 0 75%; max-width: 75%; }
-.col-10 { flex: 0 0 83.333%; max-width: 83.333%; }
-.col-11 { flex: 0 0 91.667%; max-width: 91.667%; }
-.col-12 { flex: 0 0 100%; max-width: 100%; }
