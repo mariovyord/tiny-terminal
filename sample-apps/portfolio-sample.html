@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiny Terminal - Retro Web Experience</title>
+    <link rel="stylesheet" href="../tiny-terminal.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+    
+    <header>
+        <h1>tiny-terminal.io</h1>
+        <p>A Terminal-Inspired Web Experience for Hackers & Geeks</p>
+        <p><a href="#contact">[ Contact Me ]</a> | <a href="#about">[ About ]</a> | <a href="#projects">[ Projects ]</a></p>
+    </header>
+
+    <hr>
+
+    <section id="about">
+        <h2>About This Site</h2>
+        <p>This website is styled entirely with the <mark>Tiny Terminal</mark> CSS framework — minimal, retro, pixelated. Inspired by the green glow of old-school CRT monitors.</p>
+        <blockquote>
+            "Because websites shouldn't always look like corporate dashboards."
+        </blockquote>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Terminal UI</td>
+                    <td>A CSS framework for hacker-style websites.</td>
+                    <td><a href="#">[ View ]</a></td>
+                </tr>
+                <tr>
+                    <td>Retro Blog</td>
+                    <td>A blog that looks like it's from 1989.</td>
+                    <td><a href="#">[ Read ]</a></td>
+                </tr>
+                <tr>
+                    <td>CLI Portfolio</td>
+                    <td>A terminal-based interactive portfolio site.</td>
+                    <td><a href="#">[ Explore ]</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form onsubmit="event.preventDefault(); alert('Message sent!');">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your hacker alias" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@cyberspace.com" required>
+
+            <label for="msg">Message</label>
+            <textarea id="msg" rows="4" placeholder="Your message..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2025 tiny-terminal.io | Built with pure CSS & passion | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> to open a real terminal</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
