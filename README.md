@@ -10,6 +10,10 @@ Inspired by [Just fucking use HTML](https://justfuckingusehtml.com/) and [Tiny B
 
 Size: ~8KB (Small enough to fit on a floppy disk!)
 
+## Demo
+
+Check out the live demo here: [Tiny Terminal CSS Demo](https://mariovyord.github.io/tiny-terminal-css/index.html)
+
 ## Features
 
 - 🖥️ Retro Terminal Aesthetic: Green text, glowing effects, and simple lines.
